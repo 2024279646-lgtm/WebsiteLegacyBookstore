@@ -291,39 +291,46 @@ cursor:pointer;
 /* NEWSLETTER */
 
 .newsletter{
-background:#D4A017;
-padding:60px;
-text-align:center;
-margin-top:50px;
+    background:#D4A017;
+    padding:80px 20px;
+    text-align:center;
+    margin-top:50px;
 }
 
 .newsletter h2{
-color:white;
-margin-bottom:20px;
+    color:white;
+    margin-bottom:20px;
+    font-size:40px;
 }
 
 .newsletter p{
-color:white;
-margin-bottom:20px;
+    color:white;
+    margin-bottom:25px;
+    font-size:18px;
+}
+
+.newsletter-form{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 .newsletter input{
-padding:12px;
-width:300px;
-border:none;
-border-radius:25px;
+    width:350px;
+    padding:15px;
+    border:none;
+    border-radius:30px;
 }
 
 .newsletter button{
-padding:12px 20px;
-border:none;
-border-radius:25px;
-cursor:pointer;
-margin-left:10px;
-background:white;
-color:#8B6B4F;
-font-weight:bold;
-display:inline-block;
+    padding:15px 25px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#8B6B4F;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 /* FOOTER */
@@ -619,9 +626,15 @@ Get the latest updates on new arrivals,
 best sellers and exclusive promotions.
 </p>
 
+<div class="newsletter-form">
+
 <input type="email" placeholder="Enter your email">
 
-<button onclick="subscribeNewsletter()">Subscribe</button>
+<button onclick="subscribeNewsletter()">
+Subscribe
+</button>
+
+</div>
 
 </div>
 
