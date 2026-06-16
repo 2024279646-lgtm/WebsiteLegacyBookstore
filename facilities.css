@@ -1,0 +1,380 @@
+/* ==========================================================================
+   GLOBAL STYLES & RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F8F5F0;
+    overflow-x: hidden;
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   HEADER SECTION
+   ========================================================================== */
+header {
+    background: #A8B89A; /* DIKEKALKAN: Warna hijau lembut asal anda */
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    color: #D4A017;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+
+.slogan {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+   SEARCH BAR
+   ========================================================================== */
+.search-bar {
+    background: #FFFFFF;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
+}
+
+.search-bar input {
+    width: 60%;
+    max-width: 600px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid #CCCCCC;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #8B6B4F;
+}
+
+.search-btn {
+    background: #D4A017;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #B88914;
+}
+
+.cart-icon {
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   NAVIGATION BAR
+   ========================================================================== */
+nav {
+    background: #73563F; /* Warna coklat gelap bar navigasi utama anda */
+    padding: 12px 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline-block;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #D4A017;
+}
+
+/* ==========================================================================
+   MAIN CONTENT & VIDEO LAYOUT
+   ========================================================================== */
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #8B6B4F;
+    margin: 60px 0 40px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 max(5vw, 25px);
+    margin-bottom: 80px;
+}
+
+.video-card {
+    background: #FFFFFF;
+    width: calc(50% - 20px);
+    min-width: 320px;
+    max-width: 580px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.video-title {
+    font-size: 20px;
+    color: #8B6B4F;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.video-frame {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000000;
+    margin-bottom: 15px;
+}
+
+.video-frame video {
+    width: 100%;
+    display: block;
+}
+
+.video-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+/* ==========================================================================
+   UPDATED FOOTER STYLES (MATCHES THE NAVIGATION BAR COLOUR #73563F)
+   ========================================================================== */
+.main-footer {
+    background: #73563F; /* DIUBAH: Menyertai warna coklat gelap bar navigasi anda */
+    color: #FFFFFF;
+    padding: 60px 20px 0px 20px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.footer-columns-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-col-item {
+    flex: 1;
+    min-width: 180px;
+}
+
+.col-width-large {
+    flex: 1.5;
+    min-width: 250px;
+}
+
+.col-width-medium {
+    flex: 1.2;
+    min-width: 220px;
+}
+
+.footer-col-heading {
+    color: #D4A017; /* Kekal warna emas korporat asal agar tulisan menyerlah tajam */
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.footer-col-paragraph {
+    line-height: 1.8;
+    color: #EEEEEE;
+}
+
+.footer-label-gold {
+    font-weight: 600;
+    color: #D4A017;
+    margin-bottom: 2px;
+}
+
+.footer-quick-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-quick-links li {
+    margin-bottom: 8px;
+}
+
+.footer-quick-links li a {
+    color: #EEEEEE;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    line-height: 1.8;
+}
+
+.footer-quick-links li a:hover {
+    color: #D4A017;
+}
+
+.footer-horizontal-line {
+    max-width: 1200px;
+    margin: 40px auto 30px auto;
+    border: 0;
+    height: 1px;
+    background: #8C6A50; /* Garisan halus pemisah berton coklat harmoni */
+}
+
+.footer-academic-disclaimer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    font-size: 12px;
+    color: #DDDDDD;
+    line-height: 1.6;
+}
+
+.footer-academic-disclaimer strong {
+    color: #DDDDDD;
+}
+
+.footer-bottom-dark-bar {
+    background: #5E4633; /* Warna coklat pekat sikit khusus untuk jalur hak cipta bawah */
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #6B503A;
+}
+
+.footer-bottom-dark-bar p {
+    font-size: 13px;
+    color: #D1C4BA;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/* ==========================================================================
+   CART SIDEBAR STYLES
+   ========================================================================== */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 320px;
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.close-cart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-sidebar h2 {
+    margin-bottom: 20px;
+    color: #8B6B4F;
+    font-family: 'Playfair Display', serif;
+}
+
+#cart-items {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+#payment-method, #card-number {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.checkout {
+    width: 100%;
+    background: #D4A017;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.checkout:hover {
+    background: #B88914;
+}
