@@ -1,0 +1,1151 @@
+/* ==========================================================================
+   1. GLOBAL RESET & UTILITY
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fcfbf7; 
+    color: #333333;
+}
+
+/* Pembersih Float XHTML Penting */
+.clearfix {
+    clear: both;
+    display: block;
+    height: 0;
+}
+
+/* ==========================================================================
+   2. MAIN HEADER (100% Mengikut image_58a09f.png)
+   ========================================================================== */
+.main-header {
+    background-color: #9eb099; /* Warna hijau sage mengikut imej rujukan */
+    text-align: center;
+    padding: 35px 15px 40px 15px;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.site-logo {
+    max-height: 140px; /* Saiz logo yang seimbang di tengah-tengah */
+    width: auto;
+    display: inline-block;
+    background: #ffffff; /* Kotak putih jika fail imej ada latar belakang tulen */
+}
+
+.site-title {
+    font-family: 'Times New Roman', Times, Georgia, serif; /* Font berkaki mengikut imej */
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.site-slogan {
+    color: #ffffff;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   3. BAR NAVIGASI (Warna Coklat & Susunan Rapat mengikut image_58a09f.png)
+   ========================================================================== */
+.navbar-container {
+    background-color: #83644b; /* Warna coklat tanah liat mengikut imej rujukan */
+    text-align: center;
+    padding: 18px 10px;
+    width: 100%;
+}
+
+.navbar-links {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 22px; /* Jarak padding tepi yang rapat dan kemas */
+    display: inline-block;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #f7ebd3 !important; /* Efek keemasan pastel lembut semasa di-hover */
+}
+
+/* Sistem Dropdown Tradisional */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 210px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    z-index: 999;
+    top: 100%;
+    left: 15px;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: #333333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f0eb;
+    color: #83644b;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ==========================================================================
+   4. UTILITY BAR (Kotak Carian & Kedudukan Troli)
+   ========================================================================== */
+.utility-bar {
+    max-width: 1200px;
+    margin: 35px auto 10px auto;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+}
+
+.search-box-wrapper {
+    display: inline-block;
+    width: 500px;
+}
+
+.search-box-wrapper form {
+    display: block;
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+    background-color: #ffffff;
+    height: 42px;
+    overflow: hidden;
+}
+
+.search-input {
+    width: 80%;
+    height: 100%;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    float: left;
+    background-color: #ffffff;
+}
+
+.search-submit-btn {
+    width: 20%;
+    height: 100%;
+    background-color: #d49a17; 
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    float: right;
+}
+
+/* KEMAS KINI: Menambah kesan hover interaktif pada ikon troli atas */
+.cart-box {
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #705235;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cart-box:hover {
+    transform: scale(1.05);
+    color: #83644b;
+}
+
+.cart-count-badge {
+    background-color: #d49a17;
+    color: #ffffff;
+    font-size: 11px;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: relative;
+    top: -8px;
+    margin-left: 2px;
+}
+
+/* ==========================================================================
+   5. KANDUNGAN GRID KAD BUKU PRODUK (Maksimum 5 Buku Sebaris Sempurna)
+   ========================================================================== */
+.content-container {
+    max-width: 1260px; 
+    margin: 40px auto 60px auto;
+    padding: 0 10px;
+    text-align: center;
+    display: block;
+}
+
+.category-main-title {
+    font-family: 'Georgia', serif;
+    color: #83644b;
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.product-cards-grid {
+    text-align: center;
+    width: 100%;
+    font-size: 0; 
+}
+
+/* KEMAS KINI: Ketinggian kad dialih keluar (auto) supaya sepadan dengan pertambahan elemen baharu */
+.book-card-item {
+    background: #ffffff;
+    padding: 15px 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: inline-block; 
+    vertical-align: top;
+    width: 215px;
+    margin: 10px 8px;
+    text-align: center;
+    font-size: 14px; 
+}
+
+.book-img-frame {
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.book-cover-img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+.book-title-container {
+    height: 65px; 
+    margin-bottom: 4px;
+    overflow: hidden;
+}
+
+.book-title-text {
+    font-size: 13px;
+    font-weight: bold;
+    color: #222222;
+    line-height: 1.3;
+}
+
+.book-author-text {
+    font-size: 12px;
+    color: #777777;
+    margin-bottom: 10px;
+}
+
+.book-spec-box {
+    background-color: #fdfcf9;
+    border-top: 1px dashed #e6e3dc;
+    border-bottom: 1px dashed #e6e3dc;
+    padding: 10px 6px;
+    margin-bottom: 12px;
+    text-align: left;
+    font-size: 11px;
+    color: #555555;
+    line-height: 1.5;
+    height: 105px; 
+}
+
+.book-spec-box p {
+    margin-bottom: 2px;
+}
+
+.book-spec-box p span {
+    font-weight: bold;
+    color: #705235;
+    display: inline-block;
+    width: 58px;
+}
+
+/* KEMAS KINI: Tulisan status stok warna hijau daun yang kemas */
+.book-stock-status {
+    font-size: 13px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.book-price-text {
+    color: #83644b;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.book-cart-btn {
+    background-color: #83644b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+}
+
+.book-cart-btn:hover {
+    background-color: #705235;
+}
+
+/* KEMAS KINI: Struktur reka bentuk butang Buy Now baharu */
+.book-buy-now-btn {
+    background-color: #d49a17;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 8px;
+    display: block;
+}
+
+.book-buy-now-btn:hover {
+    background-color: #b38112;
+}
+
+/* ==========================================================================
+   6. FOOTER (Wajib Kekal Berada di Paling Bawah - Bersih & Sempurna)
+   ========================================================================== */
+.main-footer {
+    background-color: #83644b; 
+    padding: 60px 0 0 0; 
+    text-align: left;
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+.footer-columns-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer-col-item {
+    float: left;
+    width: 17%;
+    padding: 0 10px;
+}
+
+.col-width-large { width: 26%; }
+.col-width-medium { width: 23%; }
+
+.footer-col-heading {
+    color: #d49a17 !important; 
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-col-paragraph {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #ffffff !important; 
+}
+
+.footer-label-gold {
+    font-size: 13px;
+    font-weight: bold;
+    color: #d49a17 !important;
+    margin-bottom: 2px;
+}
+
+.footer-quick-links {
+    list-style: none;
+}
+
+.footer-quick-links li {
+    margin-bottom: 8px;
+}
+
+.footer-quick-links a {
+    color: #ffffff !important; 
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-quick-links a:hover {
+    color: #d49a17 !important;
+}
+
+.footer-horizontal-line {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    max-width: 1200px;
+    margin: 40px auto 30px auto;
+}
+
+.footer-academic-disclaimer {
+    text-align: center;
+    font-size: 13px;
+    color: #e3ded6 !important;
+    line-height: 1.7;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px 40px 40px; 
+}
+
+.footer-academic-disclaimer strong {
+    color: #ffffff !important;
+    font-style: italic;
+}
+
+.footer-bottom-dark-bar {
+    background-color: #614733; 
+    padding: 22px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-bottom-dark-bar p {
+    font-size: 14px;
+    color: #ffffff !important;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   1. GLOBAL RESET & UTILITY
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fcfbf7; 
+    color: #333333;
+}
+
+.clearfix {
+    clear: both;
+    display: block;
+    height: 0;
+}
+
+/* ==========================================================================
+   2. MAIN HEADER
+   ========================================================================== */
+.main-header {
+    background-color: #9eb099; 
+    text-align: center;
+    padding: 35px 15px 40px 15px;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.site-logo {
+    max-height: 140px; 
+    width: auto;
+    display: inline-block;
+}
+
+.site-title {
+    font-family: 'Times New Roman', Times, Georgia, serif; 
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.site-slogan {
+    color: #ffffff;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   3. BAR NAVIGASI
+   ========================================================================== */
+.navbar-container {
+    background-color: #83644b; 
+    text-align: center;
+    padding: 18px 10px;
+    width: 100%;
+}
+
+.navbar-links {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 22px; 
+    display: inline-block;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #f7ebd3 !important; 
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 210px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    z-index: 999;
+    top: 100%;
+    left: 15px;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: #333333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f0eb;
+    color: #83644b;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ==========================================================================
+   4. UTILITY BAR
+   ========================================================================== */
+.utility-bar {
+    max-width: 1200px;
+    margin: 35px auto 10px auto;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+}
+
+.search-box-wrapper {
+    display: inline-block;
+    width: 500px;
+}
+
+.search-box-wrapper form {
+    display: block;
+    border: 1px solid #cccccc;
+    border-radius: 25px;
+    background-color: #ffffff;
+    height: 42px;
+    overflow: hidden;
+}
+
+.search-input {
+    width: 80%;
+    height: 100%;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    float: left;
+    background-color: #ffffff;
+}
+
+.search-submit-btn {
+    width: 20%;
+    height: 100%;
+    background-color: #d49a17; 
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    float: right;
+}
+
+.cart-box {
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #705235;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cart-box:hover {
+    transform: scale(1.05);
+    color: #83644b;
+}
+
+.cart-count-badge {
+    background-color: #d49a17;
+    color: #ffffff;
+    font-size: 11px;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: relative;
+    top: -8px;
+    margin-left: 2px;
+}
+
+/* ==========================================================================
+   5. KANDUNGAN GRID KAD BUKU PRODUK
+   ========================================================================== */
+.content-container {
+    max-width: 1260px; 
+    margin: 40px auto 60px auto;
+    padding: 0 10px;
+    text-align: center;
+    display: block;
+}
+
+.category-main-title {
+    font-family: 'Georgia', serif;
+    color: #83644b;
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.product-cards-grid {
+    text-align: center;
+    width: 100%;
+    font-size: 0; 
+}
+
+.book-card-item {
+    background: #ffffff;
+    padding: 15px 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: inline-block; 
+    vertical-align: top;
+    width: 215px;
+    margin: 10px 8px;
+    text-align: center;
+    font-size: 14px; 
+}
+
+.book-img-frame {
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.book-cover-img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+.book-title-container {
+    height: 65px; 
+    margin-bottom: 4px;
+    overflow: hidden;
+}
+
+.book-title-text {
+    font-size: 13px;
+    font-weight: bold;
+    color: #222222;
+    line-height: 1.3;
+}
+
+.book-author-text {
+    font-size: 12px;
+    color: #777777;
+    margin-bottom: 10px;
+}
+
+.book-spec-box {
+    background-color: #fdfcf9;
+    border-top: 1px dashed #e6e3dc;
+    border-bottom: 1px dashed #e6e3dc;
+    padding: 10px 6px;
+    margin-bottom: 12px;
+    text-align: left;
+    font-size: 11px;
+    color: #555555;
+    line-height: 1.5;
+    height: 105px; 
+}
+
+.book-spec-box p {
+    margin-bottom: 2px;
+}
+
+.book-spec-box p span {
+    font-weight: bold;
+    color: #705235;
+    display: inline-block;
+    width: 58px;
+}
+
+.book-stock-status {
+    font-size: 13px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.book-price-text {
+    color: #83644b;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.book-cart-btn {
+    background-color: #83644b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+}
+
+.book-cart-btn:hover {
+    background-color: #705235;
+}
+
+.book-buy-now-btn {
+    background-color: #d49a17;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 8px;
+    display: block;
+}
+
+.book-buy-now-btn:hover {
+    background-color: #b38112;
+}
+
+/* ==========================================================================
+   6. KEMAS KINI: GAYA REKA BENTUK POP-UP MODAL (KAEDAH PEMBAYARAN)
+   ========================================================================== */
+.modal-overlay {
+    display: none; /* Disembunyikan secara lalai */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Efek latar belakang gelap kabur */
+}
+
+.modal-content-card {
+    background-color: #ffffff;
+    margin: 12% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 450px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+    position: relative;
+    text-align: left;
+}
+
+.modal-close-btn {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.modal-close-btn:hover {
+    color: #333333;
+}
+
+.modal-payment-title {
+    font-family: 'Georgia', serif;
+    color: #83644b;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f5f0eb;
+    padding-bottom: 10px;
+}
+
+.modal-product-summary {
+    background-color: #fcfbf7;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e6e3dc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.modal-price-highlight {
+    color: #d49a17;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.modal-section-subtitle {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.payment-option-label {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.payment-option-label:hover {
+    background-color: #fdfcf9;
+    border-color: #83644b;
+}
+
+.payment-option-label input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.1);
+    vertical-align: middle;
+}
+
+.option-custom-text {
+    vertical-align: middle;
+    color: #333333;
+    font-weight: bold;
+}
+
+.modal-pay-submit-btn {
+    background-color: #d49a17;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 3px 10px rgba(212, 154, 23, 0.2);
+}
+
+.modal-pay-submit-btn:hover {
+    background-color: #b38112;
+}
+
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
+.main-footer {
+    background-color: #83644b; 
+    padding: 60px 0 0 0; 
+    text-align: left;
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+.footer-columns-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer-col-item {
+    float: left;
+    width: 17%;
+    padding: 0 10px;
+}
+
+.col-width-large { width: 26%; }
+.col-width-medium { width: 23%; }
+
+.footer-col-heading {
+    color: #d49a17 !important; 
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-col-paragraph {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #ffffff !important; 
+}
+
+.footer-label-gold {
+    font-size: 13px;
+    font-weight: bold;
+    color: #d49a17 !important;
+    margin-bottom: 2px;
+}
+
+.footer-quick-links {
+    list-style: none;
+}
+
+.footer-quick-links li {
+    margin-bottom: 8px;
+}
+
+.footer-quick-links a {
+    color: #ffffff !important; 
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-quick-links a:hover {
+    color: #d49a17 !important;
+}
+
+.footer-horizontal-line {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    max-width: 1200px;
+    margin: 40px auto 30px auto;
+}
+
+.footer-academic-disclaimer {
+    text-align: center;
+    font-size: 13px;
+    color: #e3ded6 !important;
+    line-height: 1.7;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px 40px 40px; 
+}
+
+.footer-academic-disclaimer strong {
+    color: #ffffff !important;
+    font-style: italic;
+}
+
+.footer-bottom-dark-bar {
+    background-color: #614733; 
+    padding: 22px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-bottom-dark-bar p {
+    font-size: 14px;
+    color: #ffffff !important;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   REKA BENTUK KOTAK INPUT NOMBOR KAD KREDIT / DEBIT
+   ========================================================================== */
+.card-details-container {
+    display: none; /* Disembunyikan secara lalai, hanya muncul jika kad diklik */
+    background-color: #fcfbf7;
+    border: 1px dashed #83644b;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin: -5px 0 12px 0;
+    animation: slideDownInput 0.3s ease;
+}
+
+.card-input-label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #705235;
+    margin-bottom: 6px;
+}
+
+.card-input-box {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-family: monospace; /* Font monospace supaya susunan angka kad nampak sekata */
+    letter-spacing: 1.5px;
+    color: #333333;
+    outline: none;
+}
+
+.card-input-box:focus {
+    border-color: #83644b;
+    box-shadow: 0 0 5px rgba(131, 100, 75, 0.3);
+}
+
+@keyframes slideDownInput {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   GAYA REKA BENTUK UTK BUTANG PAGINATION (1, 2, 3) DI BAWAH PAGE
+   ========================================================================== */
+.pagination-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 20px 0;
+    gap: 10px;
+    width: 100%;
+    clear: both; /* Mengelakkan ralat kedudukan susunan kad buku */
+}
+
+.page-link {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #83644b; /* Warna coklat tema menu anda */
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 2px solid #83644b;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Kesan apabila tetikus lalu (Hover) atas butang */
+.page-link:hover:not(.disabled):not(.active) {
+    background-color: #d49a17; /* Warna emas/kuning butang buy now */
+    border-color: #d49a17;
+    color: #ffffff;
+}
+
+/* Gaya rupa nombor halaman yang tengah aktif (Nombor 1) */
+.page-link.active {
+    background-color: #83644b;
+    color: #ffffff;
+    border-color: #83644b;
+    cursor: default;
+}
+
+/* Gaya rupa butang yang disekat (Contoh: Previous dekat Page 1) */
+.page-link.disabled {
+    color: #cccccc;
+    border-color: #e6e3dc;
+    background-color: #fcfbf7;
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   GAYA REKA BENTUK UTK BUTANG PAGINATION (1, 2, 3) DI BAWAH PAGE
+   ========================================================================== */
+.pagination-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 20px 0;
+    gap: 10px;
+    width: 100%;
+    clear: both; /* Mengelakkan ralat kedudukan susunan kad buku */
+}
+
+.page-link {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #83644b; /* Warna coklat tema menu anda */
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 2px solid #83644b;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Kesan apabila tetikus lalu (Hover) atas butang */
+.page-link:hover:not(.disabled):not(.active) {
+    background-color: #d49a17; /* Warna emas/kuning butang buy now */
+    border-color: #d49a17;
+    color: #ffffff;
+}
+
+/* Gaya rupa nombor halaman yang tengah aktif (Nombor 1) */
+.page-link.active {
+    background-color: #83644b;
+    color: #ffffff;
+    border-color: #83644b;
+    cursor: default;
+}
+
+/* Gaya rupa butang yang disekat (Contoh: Previous dekat Page 1) */
+.page-link.disabled {
+    color: #cccccc;
+    border-color: #e6e3dc;
+    background-color: #fcfbf7;
+    cursor: not-allowed;
+}
