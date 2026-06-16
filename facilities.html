@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Facilities - Legacy Books</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;family=Playfair+Display:wght@600&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="facilities.css?v=1.7" />
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.jpg" class="logo" alt="Legacy Books Logo" />
+        <h1>Legacy Books</h1>
+        <p class="slogan">Preserving Stories, Inspiring Generations</p>
+    </header>
+
+ 
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="fiction.html">Fiction</a>
+        <a href="nonfiction.html">Non-Fiction</a>
+        <a href="children.html">Children's Books</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="stationery.html">Stationery</a>
+        <a href="others.html">Others</a>
+        <a href="group.html">Our Group</a>
+    </nav>
+
+    <h2 class="section-title">Our Store Facilities</h2>
+    
+    <div class="video-container">
+        
+        <div class="video-card">
+            <h3 class="video-title">Grand Opening &amp; Virtual Walkthrough</h3>
+            <div class="video-frame">
+                <video controls="controls" poster="video-placeholder1.jpg">
+                    <source src="open.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p class="video-description">
+                Experience the grand opening highlights and take an exclusive look inside our premium facilities designed for book lovers.
+            </p>
+        </div>
+
+        <div class="video-card">
+            <h3 class="video-title">Legacy Books Bookstore Tour</h3>
+            <div class="video-frame">
+                <video controls="controls" poster="video-placeholder2.jpg">
+                    <source src="tour.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p class="video-description">
+                Let's have a tour of our bookstore! Discover our cozy reading spaces, curated collections, and peaceful study environments.
+            </p>
+        </div>
+
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-columns-wrapper">
+            <div class="footer-col-item col-width-large">
+                <h4 class="footer-col-heading">LEGACY BOOKS</h4>
+                <p class="footer-col-paragraph">Preserving Stories, Inspiring Generations. Hub carian buku korporat dan akademik pilihan utama anda.</p>
+            </div>
+            
+            <div class="footer-col-item">
+                <h4 class="footer-col-heading">HELP &amp; SUPPORT</h4>
+                <ul class="footer-quick-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col-item">
+                <h4 class="footer-col-heading">OPERATING HOURS</h4>
+                <p class="footer-label-gold">Mon - Fri:</p>
+                <p class="footer-col-paragraph">9:00 AM - 6:00 PM</p>
+                <p class="footer-label-gold" style="margin-top: 10px;">Sat - Sun:</p>
+                <p class="footer-col-paragraph">Closed</p>
+                <p class="footer-label-gold" style="margin-top: 10px;">Public Holiday:</p>
+                <p class="footer-col-paragraph">Closed</p>
+            </div>
+            
+            <div class="footer-col-item col-width-medium">
+                <h4 class="footer-col-heading">CONTACT US</h4>
+                <p class="footer-col-paragraph">Email: info@legacybooks.com.my</p>
+                <p class="footer-col-paragraph" style="margin-top: 4px;">Email: support@legacybooks.com.my</p>
+                <p class="footer-col-paragraph" style="margin-top: 10px;">Phone: +603-1234 5678</p>
+            </div>
+            
+            <div class="footer-col-item">
+                <h4 class="footer-col-heading">FOLLOW US</h4>
+                <ul class="footer-quick-links">
+                    <li><a href="#">Instagram: @legacybooks</a></li>
+                    <li><a href="#">TikTok: @legacybooks</a></li>
+                    <li><a href="#">Facebook: Legacy Books</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="footer-horizontal-line"></div>
+        
+        <div class="footer-academic-disclaimer">
+            <p><strong>Disclaimer:</strong> This website is NOT the official website of Legacy Books. This website was developed strictly for the purpose of learning XHTML &amp; CSS only for the course IML254 (Introduction to Web Content Development).</p>
+            <p style="margin-top: 25px;">Recommended Browser: Google Chrome or Mozilla Firefox | Best Resolution: 1920x1080 pixels | Last Updated: June 15, 2026</p>
+        </div>
+
+        <div class="footer-bottom-dark-bar">
+            <p>&copy; 2026 Legacy Books. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="cart-sidebar" id="cart">
+        <span class="close-cart" onclick="closeCart()">✖</span>
+        <h2>Shopping Cart</h2>
+        <div id="cart-items"></div>
+        
+        <select id="payment-method">
+            <option value="">Select Payment Method</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+            <option value="Online Banking">Online Banking</option>
+            <option value="E-Wallet">E-Wallet</option>
+        </select>
+        
+        <input type="text" id="card-number" placeholder="Enter Card Number" />
+        <button type="button" class="checkout" onclick="checkout()">Checkout</button>
+    </div>
+
+    <script type="text/javascript">
+    //<![CDATA[
+    function openCart(){
+        document.getElementById("cart").classList.add("active");
+    }
+
+    function closeCart(){
+        document.getElementById("cart").classList.remove("active");
+    }
+
+    function checkout(){
+        let paymentMethod = document.getElementById("payment-method").value;
+        let cardNumber = document.getElementById("card-number").value;
+
+        if(document.getElementById("cart-items").innerHTML == ""){
+            alert("Your cart is empty!");
+        } else if(paymentMethod == "") {
+            alert("Please select a payment method!");
+        } else if(cardNumber == "") {
+            alert("Please enter your card number!");
+        } else {
+            alert("Payment Successful via " + paymentMethod + "! Thank you for shopping at Legacy Books 📚");
+            document.getElementById("cart-items").innerHTML = "";
+            document.getElementById("payment-method").value = "";
+            document.getElementById("card-number").value = "";
+        }
+    }
+    //]]>
+    </script>
+</body>
+</html>
