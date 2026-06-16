@@ -1,0 +1,277 @@
+/* ==========================================================================
+   1. GLOBAL RESETS
+   ========================================================================== */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FDFBF7; 
+    overflow-x: hidden;
+    color: #333333;
+}
+
+/* ==========================================================================
+   2. HEADER AREA
+   ========================================================================== */
+header {
+    background: #A8B89A;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 4px solid #8B6B4F;
+    margin: 0 !important;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.slogan {
+    color: #ffffff;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+   3. NAVIGATION BAR
+   ========================================================================== */
+nav {
+    background: #8B6B4F;
+    padding: 15px 5px;
+    text-align: center;
+    margin: 0 !important;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #D4A017;
+}
+
+/* ==========================================================================
+   4. CONTENT ABOUT US (.about-page)
+   ========================================================================== */
+body.about-page {
+    background: url('exterior.jpg') no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+.page-title {
+    text-align: center;
+    color: #D4A017;
+    font-size: 55px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 5px black, 0px 0px 10px rgba(0,0,0,0.5);
+    letter-spacing: 2px;
+    margin: 40px 0 20px !important;
+}
+
+.content-about {
+    width: 85%;
+    margin: 0 auto 60px;
+    padding: 40px;
+    background: rgba(248, 245, 240, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.content-about h2 {
+    color: #8B6B4F;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+}
+
+.content-about h2:first-of-type { margin-top: 0; }
+
+.content-about p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.info-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.info-box {
+    background: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-top: 4px solid #D4A017;
+}
+
+.info-box h3 { color: #D4A017; margin-bottom: 12px; font-size: 18px; }
+.info-box p { font-size: 14px; line-height: 1.6; color: #555555; }
+
+/* ==========================================================================
+   5. INDUK FOOTER AREA (Tetapan Padu & Standardized)
+   ========================================================================== */
+.footer {
+    background-color: #8B6B4F; /* Warna coklat korporat */
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 40px 30px 40px;
+    max-width: 1350px; /* Lebar kontener dibesarkan supaya lajur luas */
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 180px;
+}
+
+/* Khas untuk lajur Contact & Follow Us supaya teks email kekal sebaris lurus */
+.footer-column.contact-column {
+    min-width: 290px; /* Ditambah ruang lebar bagi emel */
+    white-space: nowrap; /* Mengunci teks daripada melompat pecah dua */
+}
+
+/* Tajuk lajur warna kuning emas */
+.footer-column h3 {
+    color: #D4A017; 
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+/* Tulisan teks perenggan lajur */
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* Warna kuning hari kerja/operasi */
+.footer-column p span.highlight {
+    color: #D4A017;
+}
+
+/* Tetapan senarai pautan lajur Help & Support */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 15px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #D4A017;
+}
+
+/* Garisan pembagi */
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    max-width: 1270px;
+    margin: 0 auto;
+}
+
+/* Teks kenyataan penafian (Disclaimer) */
+.disclaimer-area {
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.disclaimer-text {
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.meta-info {
+    font-size: 13px;
+    margin: 8px 0;
+    opacity: 0.8;
+}
+
+/* Bar Hak Cipta bawah sekali (Coklat Gelap) */
+.copyright {
+    text-align: center;
+    padding: 20px;
+    background-color: #6F543D;
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+/* RESPONSIVE DESIGN UNTUK TELEFON */
+@media (max-width: 1024px) {
+    .footer-column.contact-column {
+        white-space: normal; /* Benarkan wrap pada mobile supaya tak melimpah skrin */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    .footer-column {
+        margin-bottom: 25px;
+        width: 100%;
+    }
+}
