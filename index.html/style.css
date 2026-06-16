@@ -1,0 +1,663 @@
+/* ==========================================================================
+   GLOBAL RESETS (Membuang Semua Jarak Putih Terputus)
+   ========================================================================== */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FDFBF7 !important; 
+    background-image: none !important; 
+    overflow-x: hidden;
+    color: #333333;
+}
+
+/* ==========================================================================
+   HEADER AREA
+   ========================================================================== */
+header {
+    background: #A8B89A;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 4px solid #8B6B4F;
+    margin: 0 !important;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    color: #D4A017;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.slogan {
+    color: #ffffff;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   SEARCH BAR AREA
+   ========================================================================== */
+.search-bar {
+    background-color: #FDFBF7 !important; 
+    padding: 25px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: none !important; 
+    border-top: 1px solid rgba(139, 107, 79, 0.15);
+    border-bottom: 1px solid rgba(139, 107, 79, 0.15);
+    margin: 0 !important;
+    width: 100%;
+}
+
+.search-bar input {
+    width: 45%;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    outline: none;
+    transition: border 0.3s;
+    background-color: #ffffff;
+}
+
+.search-bar input:focus {
+    border-color: #8B6B4F;
+}
+
+.search-btn {
+    background: #D4A017;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.search-btn:hover {
+    background: #b58711;
+}
+
+.cart-icon {
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+    color: #8B6B4F;
+}
+
+.cart-icon:hover {
+    transform: scale(1.15);
+}
+
+/* ==========================================================================
+   NAVIGATION AREA (KEMASKINI: Saiz font disesuaikan untuk 9 menu)
+   ========================================================================== */
+nav {
+    background: #8B6B4F;
+    padding: 15px 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 !important;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #D4A017;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   SLIDER AREA
+   ========================================================================== */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background: #FDFBF7;
+    margin: 0 !important;
+}
+
+.slide {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.prev:hover, .next:hover {
+    background: #D4A017;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 550px;
+    color: white;
+    backdrop-filter: blur(3px);
+}
+
+.banner-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    margin-bottom: 15px;
+    color: #D4A017;
+}
+
+.banner-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.shop-btn {
+    background: #D4A017;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.shop-btn:hover {
+    background: #b58711;
+}
+
+/* ==========================================================================
+   CONTENT SECTIONS
+   ========================================================================== */
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #8B6B4F;
+    margin: 60px 0 30px !important;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #D4A017;
+    margin: 10px auto 0;
+}
+
+.collections {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 260px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #444;
+}
+
+.books {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book {
+    width: 230px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.book:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+.book img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.book h4 {
+    padding: 15px 10px 5px;
+    font-size: 16px;
+    color: #333;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price {
+    color: #D4A017;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+   
+.book button {
+    background: #D4A017;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.book button:hover {
+    background: #b58711;
+}
+
+/* ==========================================================================
+   NEWSLETTER AREA
+   ========================================================================== */
+.newsletter {
+    background: #D4A017;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.newsletter h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+}
+
+.newsletter p {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 16px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.newsletter input {
+    width: 350px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+}
+
+.newsletter button {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    background: #8B6B4F;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter button:hover {
+    background: #6f543d;
+}
+
+/* ==========================================================================
+   FOOTER AREA (KEMASKINI: Menggunakan Flexbox Adil untuk Mengatasi Pertindihan)
+   ========================================================================== */
+.footer {
+    background: #8B6B4F;
+    color: white;
+    margin-top: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Membahagi ruang kontainer secara adil */
+    flex-wrap: wrap;
+    padding: 50px 20px 30px;
+    max-width: 1250px; /* Lebar kontainer dinaikkan sedikit */
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1 1 200px; /* Memberi ruang fleksibel minimum 200px untuk mengelakkan overlap */
+    margin-bottom: 30px;
+    vertical-align: top;
+}
+
+.footer-column h3 {
+    color: #D4A017;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-column p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 13px;
+    color: #f1e9e3;
+}
+
+.footer-column p span {
+    color: #D4A017;
+    font-weight: 500;
+}
+
+/* Mengemaskan Struktur List Link Footer */
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    color: #f1e9e3;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    word-break: break-all; /* Memotong emel panjang secara selamat jika skrin kecil */
+}
+
+.footer-column a:hover {
+    color: #D4A017;
+    padding-left: 5px;
+}
+
+.phone-text {
+    font-size: 13px !important;
+    color: #f1e9e3 !important;
+    margin: 0 !important;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.disclaimer-area {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #e5ded9;
+}
+
+.disclaimer-text {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.tech-specs, .last-update {
+    font-size: 12px;
+    color: #d1c7bd;
+    margin-top: 5px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+    background: #6f543d;
+    font-size: 14px;
+    color: #e5ded9;
+}
+
+/* ==========================================================================
+   SHOPPING CART SIDEBAR
+   ========================================================================== */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: -4px 0 15px rgba(0,0,0,0.15);
+    padding: 30px 20px;
+    transition: right 0.4s ease;
+    z-index: 999;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-sidebar h2 {
+    font-family: 'Playfair Display', serif;
+    color: #8B6B4F;
+    margin-bottom: 20px;
+}
+
+.close-cart {
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+    color: #aaa;
+    transition: color 0.2s;
+}
+
+.close-cart:hover {
+    color: #333;
+}
+
+#cart-items {
+    max-height: 40%;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+#cart-items p {
+    padding: 8px 5px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+#payment-method, #card-number {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.checkout {
+    width: 100%;
+    padding: 14px;
+    background: #D4A017;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.checkout:hover {
+    background: #b58711;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Sesuai Untuk Skrin Telefon & Tablet)
+   ========================================================================== */
+@media(max-width: 992px) {
+    nav a {
+        font-size: 12px;
+        margin: 0 5px;
+        padding: 5px 8px;
+    }
+}
+
+@media(max-width: 768px) {
+    header h1 { font-size: 38px; }
+    .search-bar { flex-direction: column; gap: 10px; }
+    .search-bar input { width: 90%; }
+    
+    nav {
+        padding: 10px;
+    }
+    nav a {
+        display: block;
+        margin: 8px auto;
+        width: 80%;
+        font-size: 14px;
+    }
+    
+    .slider, .slide, .slide img {
+        height: 320px;
+    }
+    
+    .banner-text {
+        left: 5%;
+        max-width: 90%;
+        padding: 20px;
+    }
+    
+    .banner-text h1 { font-size: 26px; }
+    .banner-text p { font-size: 14px; }
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        width: 100%;
+    }
+}
