@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="description" content="Legacy Books - Preserving Stories, Inspiring Generations. Your ultimate online corporate bookstore." />
+    <meta name="keywords" content="Legacy Books, Bookstore, Fiction, Non-Fiction, Children Books, Facilities, Stationery, Others, UiTM Project" />
+    <meta name="author" content="Legacy Books Team" />
+    
+    <title>Legacy Books</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;family=Playfair+Display:wght@600&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.jpg" class="logo" alt="Legacy Books Logo" />
+        <h1>Legacy Books</h1>
+        <p class="slogan">Preserving Stories, Inspiring Generations</p>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search books..." />
+        <button type="button" class="search-btn">Search</button>
+        <div class="cart-icon" onclick="openCart()">Cart 🛒</div>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="fiction.html">Fiction</a>
+        <a href="nonfiction.html">Non-Fiction</a>
+        <a href="children.html">Children's Books</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="stationery.html">Stationery</a>
+        <a href="others.html">Others</a>
+        <a href="group.html">Our Group</a>
+    </nav>
+
+    <div class="slider">
+        <button type="button" class="prev" onclick="prevSlide()">❮</button>
+        <button type="button" class="next" onclick="nextSlide()">❯</button>
+
+        <div class="slide active">
+            <img src="banner1.jpg" alt="Mid-Year Book Sale" />
+            <div class="banner-text">
+                <h1>MID-YEAR BOOK SALE</h1>
+                <p>Up To 50% Off Selected Books</p>
+                <a href="#" class="shop-btn">Shop Now</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="banner2.jpg" alt="New Arrivals" />
+            <div class="banner-text">
+                <h1>NEW ARRIVALS</h1>
+                <p>Discover Your Next Favourite Book</p>
+                <a href="#" class="shop-btn">Explore Now</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="banner3.jpg" alt="Children's Collection" />
+            <div class="banner-text">
+                <h1>CHILDREN'S COLLECTION</h1>
+                <p>Fun &amp; Educational Books For Kids</p>
+                <a href="#" class="shop-btn">Shop Now</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="banner4.jpg" alt="Best Sellers" />
+            <div class="banner-text">
+                <h1>BEST SELLERS</h1>
+                <p>Most Loved Books This Month</p>
+                <a href="#" class="shop-btn">View Collection</a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Featured Collections</h2>
+    <div class="collections">
+        <div class="card">
+            <img src="fiction.jpg" alt="Fiction" />
+            <h3>Fiction</h3>
+        </div>
+        <div class="card">
+            <img src="nonfiction.jpg" alt="Non-Fiction" />
+            <h3>Non-Fiction</h3>
+        </div>
+        <div class="card">
+            <img src="children.jpg" alt="Children's Books" />
+            <h3>Children's Books</h3>
+        </div>
+        <div class="card">
+            <img src="stationery.jpg" alt="Stationery" />
+            <h3>Stationery</h3>
+        </div>
+    </div>
+
+    <h2 class="section-title">Best Sellers</h2>
+    <div class="books">
+        <div class="book">
+            <img src="book1.jpg" alt="The Last Vampire" />
+            <h4>The Last Vampire</h4>
+            <p class="price">RM 65.95</p>
+            <button type="button" onclick="addToCart('The Last Vampire')">Add To Cart</button>
+        </div>
+        <div class="book">
+            <img src="book2.jpg" alt="The Burial Tide" />
+            <h4>The Burial Tide</h4>
+            <p class="price">RM 99.00</p>
+            <button type="button" onclick="addToCart('The Burial Tide')">Add To Cart</button>
+        </div>
+        <div class="book">
+            <img src="book3.jpg" alt="The Summer Second Chances" />
+            <h4>The Summer Second Chances</h4>
+            <p class="price">RM 64.90</p>
+            <button type="button" onclick="addToCart('The Summer Second Chances')">Add To Cart</button>
+        </div>
+        <div class="book">
+            <img src="book4.jpg" alt="Odder" />
+            <h4>Odder</h4>
+            <p class="price">RM 49.50</p>
+            <button type="button" onclick="addToCart('Odder')">Add To Cart</button>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h2>Subscribe To Our Newsletter</h2>
+        <p>Get the latest updates on new arrivals, best sellers and exclusive promotions.</p>
+        <div class="newsletter-form">
+            <input type="text" placeholder="Enter your email" />
+            <button type="button" onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-column">
+                <h3>Legacy Books</h3>
+                <p>Preserving Stories, Inspiring Generations. Hub carian buku korporat dan akademik pilihan utama anda.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Help &amp; Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Operating Hours</h3>
+                <p><span>Mon - Fri:</span><br />9:00 AM - 6:00 PM</p>
+                <p><span>Sat - Sun:</span><br />Closed</p>
+                <p><span>Public Holiday:</span><br />Closed</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="mailto:info@legacybooks.com.my">Email: info@legacybooks.com.my</a></li>
+                    <li><a href="mailto:support@legacybooks.com.my">Email: support@legacybooks.com.my</a></li>
+                    <li><p class="phone-text">Phone: +603-1234 5678</p></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/legacybooks" target="_blank">Instagram: @legacybooks</a></li>
+                    <li><a href="https://www.tiktok.com/@legacybooks" target="_blank">TikTok: @legacybooks</a></li>
+                    <li><a href="https://www.facebook.com/legacybooks" target="_blank">Facebook: Legacy Books</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="disclaimer-area">
+            <p class="disclaimer-text"><strong>Disclaimer:</strong> This website is NOT the official website of Legacy Books. This website was developed strictly for the purpose of learning XHTML &amp; CSS only for the course IML254 (Introduction to Web Content Development).</p>
+            <p class="tech-specs">Recommended Browser: Google Chrome or Mozilla Firefox | Best Resolution: 1920x1080 pixels</p>
+            <p class="last-update">Last Updated: June 15, 2026</p>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Legacy Books. All Rights Reserved.
+        </div>
+    </footer>
+
+    <div class="cart-sidebar" id="cart">
+        <span class="close-cart" onclick="closeCart()">✖</span>
+        <h2>Shopping Cart</h2>
+        <div id="cart-items"></div>
+        
+        <select id="payment-method">
+            <option value="">Select Payment Method</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+            <option value="Online Banking">Online Banking</option>
+            <option value="E-Wallet">E-Wallet</option>
+        </select>
+        
+        <input type="text" id="card-number" placeholder="Enter Card Number" />
+        <button type="button" class="checkout" onclick="checkout()">Checkout</button>
+    </div>
+
+    <script type="text/javascript">
+    //<![CDATA[
+    let slides = document.querySelectorAll(".slide");
+    let current = 0;
+
+    setInterval(function(){
+        slides[current].classList.remove("active");
+        current++;
+        if(current >= slides.length){
+            current = 0;
+        }
+        slides[current].classList.add("active");
+    }, 3000);
+
+    function openCart(){
+        document.getElementById("cart").classList.add("active");
+    }
+
+    function closeCart(){
+        document.getElementById("cart").classList.remove("active");
+    }
+
+    function nextSlide(){
+        slides[current].classList.remove("active");
+        current++;
+        if(current >= slides.length){
+            current = 0;
+        }
+        slides[current].classList.add("active");
+    }
+
+    function prevSlide(){
+        slides[current].classList.remove("active");
+        current--;
+        if(current < 0){
+            current = slides.length - 1;
+        }
+        slides[current].classList.add("active");
+    }
+
+    function addToCart(book){
+        let item = document.createElement("p");
+        item.innerHTML = "📚 " + book;
+        document.getElementById("cart-items").appendChild(item);
+        alert(book + " added to cart!");
+    }
+
+    function subscribeNewsletter(){
+        let email = document.querySelector('.newsletter input').value;
+        if(email == ""){
+            alert("Please enter your email!");
+        } else {
+            alert("Thank you for subscribing to Legacy Books Newsletter! 📚");
+            document.querySelector('.newsletter input').value = "";
+        }
+    }
+
+    function checkout(){
+        let paymentMethod = document.getElementById("payment-method").value;
+        let cardNumber = document.getElementById("card-number").value;
+
+        if(document.getElementById("cart-items").innerHTML == ""){
+            alert("Your cart is empty!");
+        } else if(paymentMethod == "") {
+            alert("Please select a payment method!");
+        } else if(cardNumber == "") {
+            alert("Please enter your card number!");
+        } else {
+            alert("Payment Successful via " + paymentMethod + "! Thank you for shopping at Legacy Books 📚");
+            document.getElementById("cart-items").innerHTML = "";
+            document.getElementById("payment-method").value = "";
+            document.getElementById("card-number").value = "";
+        }
+    }
+    //]]>
+    </script>
+</body>
+</html>
