@@ -1,0 +1,263 @@
+/* ==========================================================================
+   1. GLOBAL RESETS & GENERAL STYLES
+   ========================================================================== */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FDFBF7; 
+    overflow-x: hidden;
+    color: #333333;
+}
+
+/* ==========================================================================
+   2. HEADER AREA (Hijau Korporat)
+   ========================================================================== */
+header {
+    background: #A8B89A;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 4px solid #8B6B4F;
+    margin: 0 !important;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.slogan {
+    color: #ffffff;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+   3. NAVIGATION BAR (9 Menu Mendatar Coklat Tanah)
+   ========================================================================== */
+nav {
+    background: #8B6B4F;
+    padding: 15px 5px;
+    text-align: center;
+    margin: 0 !important;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #D4A017;
+}
+
+/* ==========================================================================
+   4. CONTENT MASTER (About Us & Judul Muka Surat)
+   ========================================================================== */
+.page-title {
+    text-align: center;
+    color: #8B6B4F;
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    margin: 40px 0 20px !important;
+}
+
+/* ==========================================================================
+   5. COVER KATEGORI NON-FICTION (Clickable Grid Style)
+   ========================================================================== */
+.categories-grid-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1350px;
+    margin: 0 auto 60px auto;
+    padding: 0 30px;
+}
+
+.category-card-link {
+    text-decoration: none; /* Hilangkan garisan biru pautan bawah teks */
+    display: block;
+}
+
+/* Reka Bentuk Kad Putih Melengkung Premium */
+.category-card {
+    background: #ffffff;
+    width: 230px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+
+/* Kesan Animasi Apabila Ditunjuk Tetikus */
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* Bingkai Imej Cover Kategori */
+.category-img-box {
+    width: 100%;
+    height: 290px;
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.category-img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+/* Label Kotak Teks Nama Kategori Bawah Gambar */
+.category-title-box {
+    padding: 20px 15px;
+    text-align: center;
+    background-color: #ffffff;
+    border-top: 1px solid #f5f5f5;
+}
+
+.category-title-box h3 {
+    font-size: 14px;
+    color: #8B6B4F;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.2px;
+    transition: color 0.2s;
+}
+
+.category-card:hover .category-title-box h3 {
+    color: #D4A017; /* Tukar warna teks ke emas apabila kad di-hover */
+}
+
+/* --- DROPDOWN GAYA KINOKUNIYA --- */
+.category-dropdown-wrapper {
+    width: 85%;
+    max-width: 320px;
+    margin: 20px auto 40px auto;
+    position: relative;
+}
+
+.kinokuniya-bar {
+    width: 100%;
+    background-color: transparent;
+    color: #333333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow-indicator { font-size: 13px; color: #666666; }
+
+.kinokuniya-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    border-radius: 4px;
+    z-index: 100;
+}
+
+.kinokuniya-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: #444444;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.kinokuniya-menu a:hover { background-color: #F8F5F0; color: #D4A017; }
+
+/* ==========================================================================
+   6. INDUK FOOTER AREA (100% Sempurna & Standardized Rapat Sebaris)
+   ========================================================================== */
+.footer {
+    background-color: #8B6B4F; 
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 40px 30px 40px;
+    max-width: 1350px; 
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-column { flex: 1; min-width: 180px; }
+.footer-column.contact-column { min-width: 290px; white-space: nowrap; }
+
+.footer-column h3 {
+    color: #D4A017; 
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+.footer-column p { font-size: 14px; line-height: 1.6; color: #ffffff; margin-bottom: 15px; }
+.footer-column p span.highlight { color: #D4A017; }
+.footer-column ul { list-style: none; padding: 0; margin: 0; }
+.footer-column ul li { margin-bottom: 15px; }
+.footer-column ul li a { color: #ffffff; text-decoration: none; font-size: 14px; }
+.footer-column ul li a:hover { color: #D4A017; }
+.footer-divider { border: 0; height: 1px; background: rgba(255, 255, 255, 0.15); max-width: 1270px; margin: 0 auto; }
+.disclaimer-area { max-width: 1270px; margin: 0 auto; padding: 30px 20px; text-align: center; color: #ffffff; }
+.disclaimer-text { font-size: 13.5px; line-height: 1.6; margin-bottom: 15px; opacity: 0.9; }
+.meta-info { font-size: 13px; margin: 8px 0; opacity: 0.8; }
+.copyright { text-align: center; padding: 20px; background-color: #6F543D; font-size: 14px; color: #ffffff; }
+
+@media (max-width: 1024px) { .footer-column.contact-column { white-space: normal; } }
+@media (max-width: 768px) { .footer-container { flex-direction: column; } .footer-column { margin-bottom: 25px; } }
