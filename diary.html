@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary of A Wimpy Kid</title>
+    <link rel="stylesheet" href="diary.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Legacy BookStore" class="site-logo">
+        </div>
+        <h1 class="site-title">Legacy Books</h1>
+        <p class="site-slogan">Preserving Stories, Inspiring Generations</p>
+    </header>
+
+    <nav class="navbar-container">
+        <div class="navbar-links">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="about.html" class="nav-item">About Us</a>
+            <a href="fiction.html" class="nav-item">Fiction</a>
+            
+            <div class="dropdown">
+                <a href="children.html" class="nav-item active">Children Section</a>
+                <div class="dropdown-content">
+                    <a href="geronimo.html">Geronimo & Thea Stilton</a>
+                    <a href="usborne.html">Usborne Reading Series</a>
+                    <a href="roald_dahl.html">Roald Dahl Series</a>
+                    <a href="manga.html">Manga & Graphic Novels</a>
+                    <a href="diary.html">Diary of A Wimpy Kid</a>
+                </div>
+            </div>
+
+            <a href="children.html" class="nav-item">Children Bookss</a>
+            <a href="facilities.html" class="nav-item">Facilities</a>
+            <a href="stationery.html" class="nav-item">Stationery</a>
+            <a href="others.html" class="nav-item">Others</a>
+            <a href="our-group.html" class="nav-item">Our Group</a>
+        </div>
+    </nav>
+
+    <div class="utility-bar">
+        <div class="search-box-wrapper">
+            <form action="search.html" method="GET">
+                <input type="text" name="query" placeholder="Search books..." class="search-input">
+                <input type="submit" value="Search" class="search-submit-btn">
+            </form>
+        </div>
+        <div class="cart-box" onclick="viewCart()">
+            <span class="cart-label">Cart 🛒</span>
+            <span id="top-cart-count" class="cart-count-badge">0</span>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+
+    <main class="content-container">
+        <h2 class="category-main-title">Diary of A Wimpy Kid</h2>
+        
+        <div class="product-cards-grid">
+            
+            <div class="book-card-item">
+                <div class="book-img-frame">
+                    <img src="diary1.jpg" alt="Diary of a Wimpy Kid #19: Hot Mess (Paperback)" class="book-cover-img">
+                </div>
+                <div class="book-title-container">
+                    <h3 class="book-title-text">Diary of a Wimpy Kid #19: Hot Mess (Paperback)</h3>
+                </div>
+                <p class="book-author-text">Kinney, Jeff</p>
+                <div class="book-spec-box">
+                    <p><span>ISBN:</span> 9780241618172</p>
+                    <p><span>Publisher:</span> Puffin UK</p>
+                    <p><span>Date:</span> September 11, 2025</p>
+                    <p><span>Pages:</span> 240</p>
+                    <p><span>Weight:</span> 200g</p>
+                </div>
+                <p class="book-stock-status">In Stock</p>
+                <p class="book-price-text">RM 39.95</p>
+                <button class="book-cart-btn" onclick="addToCart('Diary of a Wimpy Kid #19: Hot Mess (Paperback)')">Add to Cart</button>
+                <button class="book-buy-now-btn" onclick="openPaymentModal('Diary of a Wimpy Kid #19: Hot Mess (Paperback)', '39.95')">Buy Now</button>
+            </div>
+
+            <div class="book-card-item">
+                <div class="book-img-frame">
+                    <img src="diary2.jpg" alt="Diary of a Wimpy Kid #18: No Brainer (Paperback)" class="book-cover-img">
+                </div>
+                <div class="book-title-container">
+                    <h3 class="book-title-text">Diary of a Wimpy Kid #18: No Brainer (Paperback)</h3>
+                </div>
+                <p class="book-author-text">Kinney, Jeff</p>
+                <div class="book-spec-box">
+                    <p><span>ISBN:</span> 9780241583159</p>
+                    <p><span>Publisher:</span> Puffin</p>
+                    <p><span>Date:</span> January 2, 2025</p>
+                    <p><span>Pages:</span> 240</p>
+                    <p><span>Weight:</span> 174g</p>
+                </div>
+                <p class="book-stock-status">In Stock</p>
+                <p class="book-price-text">RM 39.95</p>
+                <button class="book-cart-btn" onclick="addToCart('Diary of a Wimpy Kid #18: No Brainer (Paperback)')">Add to Cart</button>
+                <button class="book-buy-now-btn" onclick="openPaymentModal('Diary of a Wimpy Kid #18: No Brainer (Paperback)', '39.95')">Buy Now</button>
+            </div>
+
+            <div class="book-card-item">
+                <div class="book-img-frame">
+                    <img src="diary3.jpg" alt="Diary of a Wimpy Kid #15: The Deep End" class="book-cover-img">
+                </div>
+                <div class="book-title-container">
+                    <h3 class="book-title-text">Diary of a Wimpy Kid #15: The Deep End</h3>
+                </div>
+                <p class="book-author-text">Kinney, Jeff</p>
+                <div class="book-spec-box">
+                    <p><span>ISBN:</span> 9780241396957</p>
+                    <p><span>Publisher:</span> Puffin UK</p>
+                    <p><span>Date:</span> -</p>
+                    <p><span>Pages:</span> -</p>
+                    <p><span>Weight:</span> 420g</p>
+                </div>
+                <p class="book-stock-status">In Stock</p>
+                <p class="book-price-text">RM 39.95</p>
+                <button class="book-cart-btn" onclick="addToCart('Diary of a Wimpy Kid #15: The Deep End')">Add to Cart</button>
+                <button class="book-buy-now-btn" onclick="openPaymentModal('Diary of a Wimpy Kid #15: The Deep End', '39.95')">Buy Now</button>
+            </div>
+      
+            <div class="book-card-item">
+                <div class="book-img-frame">
+                    <img src="diary4.jpg" alt="Diary of a Wimpy Kid #16: Big Shot" class="book-cover-img">
+                </div>
+                <div class="book-title-container">
+                    <h3 class="book-title-text">Diary of a Wimpy Kid #16: Big Shot</h3>
+                </div>
+                <p class="book-author-text">Kinney, Jeff</p>
+                <div class="book-spec-box">
+                    <p><span>ISBN:</span> 9780241396988</p>
+                    <p><span>Publisher:</span> Puffin</p>
+                    <p><span>Date:</span> January 19, 2023</p>
+                    <p><span>Pages:</span> 240</p>
+                    <p><span>Weight:</span> 174g</p>
+                </div>
+                <p class="book-stock-status">In Stock</p>
+                <p class="book-price-text">RM 39.95</p>
+                <button class="book-cart-btn" onclick="addToCart('Diary of a Wimpy Kid #16: Big Shot')">Add to Cart</button>
+                <button class="book-buy-now-btn" onclick="openPaymentModal('Diary of a Wimpy Kid #16: Big Shot', '39.95')">Buy Now</button>
+            </div>
+
+            <div class="book-card-item">
+                <div class="book-img-frame">
+                    <img src="diary5.jpg" alt="Diary of a Wimpy Kid #14: Wrecking Ball" class="book-cover-img">
+                </div>
+                <div class="book-title-container">
+                    <h3 class="book-title-text">Diary of a Wimpy Kid #14: Wrecking Ball</h3>
+                </div>
+                <p class="book-author-text">Kinney, Jeff</p>
+                <div class="book-spec-box">
+                    <p><span>ISBN:</span> 9780241396926</p>
+                    <p><span>Publisher:</span> Puffin</p>
+                    <p><span>Date:</span> -</p>
+                    <p><span>Pages:</span> 240</p>
+                    <p><span>Weight:</span> 164g</p>
+                </div>
+                <p class="book-stock-status">In Stock</p>
+                <p class="book-price-text">RM 39.95</p>
+                <button class="book-cart-btn" onclick="addToCart('Diary of a Wimpy Kid #14: Wrecking Ball')">Add to Cart</button>
+                <button class="book-buy-now-btn" onclick="openPaymentModal('Diary of a Wimpy Kid #14: Wrecking Ball', '39.95')">Buy Now</button>
+            </div>
+
+            
+            <div class="pagination-section">
+                <span class="page-link disabled">&laquo; Previous</span>
+                <a href="diary.html" class="page-link num-btn active">1</a>
+                <a href="diary_page2.html" class="page-link num-btn">2</a>
+                <a href="diary_page3.html" class="page-link num-btn">3</a>
+                <a href="diary_page2.html" class="page-link next-btn">Next &raquo;</a>
+            </div>
+
+        </div> 
+        <div class="clearfix"></div>
+    </main>
+
+    <div id="payment-modal-box" class="modal-overlay">
+        <div class="modal-content-card">
+            <span class="modal-close-btn" onclick="closePaymentModal()">&times;</span>
+            <h3 class="modal-payment-title">Secure Checkout</h3>
+            
+            <div class="modal-product-summary">
+                <p><strong>Item:</strong> <span id="modal-book-name">-</span></p>
+                <p><strong>Total Price:</strong> <span id="modal-book-price" class="modal-price-highlight">RM 0.00</span></p>
+            </div>
+            
+            <h4 class="modal-section-subtitle">Select Payment Method:</h4>
+            <form id="payment-selection-form" onsubmit="processPayment(event)">
+                
+                <label class="payment-option-label">
+                    <input type="radio" name="payment_method" value="Online Banking" required onchange="toggleCheckoutInputs()">
+                    <span class="option-custom-text">🌐 Online Banking (FPX)</span>
+                </label>
+                
+                <div id="bank-dropdown-container" class="card-details-container" style="display:none; border:1px solid #cccccc; background:#ffffff; margin-bottom:10px; padding:10px;">
+                    <label for="fpx-bank-select" class="card-input-label" style="display:inline-block; margin-right:10px;">Select Your Bank:</label>
+                    <select id="fpx-bank-select" class="card-input-box" style="width:auto; display:inline-block; letter-spacing:normal;">
+                        <option value="" disabled selected>-- Choose Bank --</option>
+                        <option value="CIMB Bank">CIMB Bank</option>
+                        <option value="Public Bank">Public Bank</option>
+                        <option value="RHB Bank">RHB Bank</option>
+                        <option value="Maybank">Maybank</option>
+                        <option value="BSN">BSN</option>
+                    </select>
+                </div>
+                
+                <label class="payment-option-label">
+                    <input type="radio" name="payment_method" value="Credit/Debit Card" onchange="toggleCheckoutInputs()">
+                    <span class="option-custom-text">💳 Credit / Debit Card</span>
+                </label>
+
+                <div id="card-input-container" class="card-details-container">
+                    <label for="card-number-field" class="card-input-label">Enter your card number:</label>
+                    <input type="text" id="card-number-field" class="card-input-box" placeholder="1234 5678 9101 2345" maxlength="19">
+                </div>
+                
+                <label class="payment-option-label">
+                    <input type="radio" name="payment_method" value="E-Wallet" onchange="toggleCheckoutInputs()">
+                    <span class="option-custom-text">📱 E-Wallet (Touch 'n Go / GrabPay)</span>
+                </label>
+                
+                <button type="submit" class="modal-pay-submit-btn">Proceed to Pay</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-column">
+                <h3>LEGACY BOOKS</h3>
+                <p>Preserving Stories, Inspiring Generations.our search hub for corporate and academic books.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>HELP & SUPPORT</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>OPERATING HOURS</h3>
+                <p><span>Mon - Fri:</span> 9:00 AM - 6:00 PM</p>
+                <p><span>Sat - Sun:</span> Closed</p>
+                <p><span>Public Holiday:</span> Closed</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>CONTACT US</h3>
+                <p>Email: info@legacybooks.com.my</p>
+                <p>Email: support@legacybooks.com.my</p>
+                <p class="phone-text">Phone: +603-1234 5678</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>FOLLOW US</h3>
+                <ul>
+                    <li><a href="#">Instagram: @legacybooks</a></li>
+                    <li><a href="#">TikTok: @legacybooks</a></li>
+                    <li><a href="#">Facebook: Legacy Books</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <hr class="footer-divider">
+        
+        <div class="disclaimer-area">
+            <p class="disclaimer-text"><strong>Disclaimer:</strong> This website is NOT the official website of Legacy Books. This website was developed strictly for the purpose of learning XHTML & CSS only for the course IML254 (Introduction to Web Content Development).</p>
+            <p class="tech-specs">Recommended Browser: Google Chrome or Mozilla Firefox | Best Resolution: 1920x1080 pixels</p>
+            <p class="last-update">Last Updated: June 15, 2026</p>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 Legacy Books. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        var cartList = [];
+
+        function addToCart(bookName) {
+            cartList.push(bookName); 
+            document.getElementById("top-cart-count").innerHTML = cartList.length;
+            alert("Success! '" + bookName  + "' has been added to your cart.");
+        }
+
+        function viewCart() {
+            if(cartList.length === 0) {
+                alert("Your cart is currently empty. Start adding some books from the shop!");
+            } else {
+                var summaryText = "Items currently in your cart:\n\n";
+                for (var i = 0; i < cartList.length; i++) {
+                   summaryText += (i + 1) + ". " +  cartList[i] + "\n";
+                }
+                summaryText += "\nTotal items: " + cartList.length;
+                alert(summaryText);
+            }
+        }
+
+        function openPaymentModal(bookName, bookPrice) {
+            document.getElementById("modal-book-name").innerHTML = bookName;
+            document.getElementById("modal-book-price").innerHTML = "RM " + bookPrice;
+            document.getElementById("payment-modal-box").style.display = "block";
+            
+            document.getElementById("bank-dropdown-container").style.display = "none";
+            document.getElementById("card-input-container").style.display = "none";
+        }
+
+        function closePaymentModal() {
+            document.getElementById("payment-modal-box").style.display = "none";
+            document.getElementById("payment-selection-form").reset();
+            document.getElementById("bank-dropdown-container").style.display = "none";
+            document.getElementById("card-input-container").style.display = "none";
+        }
+
+        function toggleCheckoutInputs() {
+            var selectedMethod = document.querySelector('input[name="payment_method"]:checked').value;
+            
+            var bankBox = document.getElementById("bank-dropdown-container");
+            var bankDropdown = document.getElementById("fpx-bank-select");
+            
+            var cardBox = document.getElementById("card-input-container");
+            var cardInput = document.getElementById("card-number-field");
+            
+            if (selectedMethod === "Online Banking") {
+                bankBox.style.display = "block";
+                bankDropdown.required = true;
+                
+                cardBox.style.display = "none";
+                cardInput.required = false;
+                cardInput.value = ""; 
+            } 
+            else if (selectedMethod === "Credit/Debit Card") {
+                cardBox.style.display = "block";
+                cardInput.required = true;
+                
+                bankBox.style.display = "none";
+                bankDropdown.required = false;
+                bankDropdown.value = "";
+            } 
+            else {
+                bankBox.style.display = "none";
+                bankDropdown.required = false;
+                bankDropdown.value = "";
+                
+                cardBox.style.display = "none";
+                cardInput.required = false;
+                cardInput.value = "";
+            }
+        }
+
+        function processPayment(event) {
+            event.preventDefault();
+            var selectedMethod = document.querySelector('input[name="payment_method"]:checked').value;
+            var bookName = document.getElementById("modal-book-name").innerHTML;
+            
+            if (selectedMethod === "Online Banking") {
+                var selectedBank = document.getElementById("fpx-bank-select").value;
+                alert("Success! Your transaction for '" + bookName + "' via [Online Banking - " + selectedBank + "] was successful!");
+            } else if (selectedMethod === "Credit/Debit Card") {
+                var cardNum = document.getElementById("card-number-field").value;
+                alert("Success! Your transaction for '" + bookName + "' via [Credit/Debit Card: **** " + cardNum.slice(-4) + "] was successful!");
+            } else {
+                alert("Success! Your transaction for '" + bookName + "' via [" + selectedMethod + "] was successful!");
+            }
+            closePaymentModal();
+        }
+    </script>
+</body>
+</html>
